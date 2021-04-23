@@ -71,10 +71,20 @@ function Loot() {
   this.getAmmor = function() {return this.ammor;}
   this.getMeds = function() {return this.meds;}
 
+  //ToDo: implement these
   this.addRawResources = function(nameOfResource, quantity) {}
   this.addComponets = function(nameOfComponet, quantity) {}
   this.addWeapon = function(weapon) {}
+  this.addAmmor = function(ammor) {}
   this.addMeds = function(nameOfMeds, quantity) {}
+
+  //ToDo: implement these
+  this.removeRawResources = function(nameOfResource, quantity) {}
+  this.removeComponets = function(nameOfComponet, quantity) {}
+  this.removeWeapon = function(idOfWeapon) {}
+  this.removeMeds = function(nameOfMeds, quantity) {}
+  this.removeAmmor = function(idOfAmmor) {}
+
 }
 
 function Base() {
