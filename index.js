@@ -89,8 +89,22 @@ function Loot() {
 
 function Base() {
   //Base type, size, storage
+  this.type;
+  this.size;
+  this.storage;
+
+  //ToDo: implement these
+  this.getType = function() {}
+  this.getSize = function() {}
+  this.getStorage = function() {}
+
+  //ToDo: implement these
+  this.setType = function() {}
+  this.setSize = function() {}
+  this.getStorage = function() {}
 }
 
 function Relations() {
   //relations ships with other clans
+  this.clans;
 }
