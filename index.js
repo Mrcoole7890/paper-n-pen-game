@@ -163,14 +163,26 @@ function Base() {
   this.storage;
 
   //ToDo: implement these
-  this.getType = function() {}
-  this.getSize = function() {}
-  this.getStorage = function() {}
+  this.getType = function() {
+    return this.type;
+  }
+  this.getSize = function() {
+    return this.size;
+  }
+  this.getStorage = function() {
+    return this.storage;
+  }
 
   //ToDo: implement these
-  this.setType = function() {}
-  this.setSize = function() {}
-  this.getStorage = function() {}
+  this.setType = function(type) {
+    this.type = type;
+  }
+  this.setSize = function(size) {
+    this.size = size;
+  }
+  this.getStorage = function(storage) {
+    this.storage = storage;
+  }
 }
 
 function Relations() {
