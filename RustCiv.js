@@ -45,6 +45,9 @@ function Member() {
   //Each member should have a skillset, name, and possibly more
   this.skillset;
   this.name;
+  this.health = 100; // Default should be 100
+  this.armmor = "none"; // All humans are born naked
+  this.weapon = "none"; // Unarmed
 
   this.setSkillSet  = function(skillset) {
     this.skillset = skillset;
@@ -61,6 +64,42 @@ function Member() {
   this.getName = function() {
     return this.name;
   };
+
+  this.getHealth = function() {
+    return this.health;
+  };
+
+  this.setHealth = function(newHealth) {
+    if (newHealth > 0) {
+      this.health = newHealth;
+      return true;
+    }
+    else return false;
+  };
+
+  this.getWeapon = function() {
+    return this.weapon;
+  };
+
+  this.setWeapon = function(newWeapon) {
+    if (this.weapon == "none") {
+      this.weapon = newWeapon;
+      return true;
+    }
+    else return false;
+  };
+
+  this.getAmmor = function() {
+    return this.ammor;
+  }
+
+  this.setAmmor = function(newAmmor) {
+    if (this.ammor == "none") {
+      this.ammor = newAmmor;
+      return true;
+    }
+    else return false;
+  }
 }
 
 function Loot() {
