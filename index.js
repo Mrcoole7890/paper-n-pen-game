@@ -48,3 +48,39 @@ ClanElement.onclick = function() {
     InfoElement.appendChild(tempMember);
   }
 }
+
+MembersElement.onclick = function() {
+  console.log("the event fired");
+  InfoElement.innerHTML = "";
+  for (var i = 0; i < TestClan.identity.getMembers().length; i++){
+    var newCard = document.createElement("div");
+    var newCardBody = document.createElement("div");
+    var newCardTitle = document.createElement("h5");
+    var newCardProgressBarOutter = document.createElement("div");
+    var newCardProgressBarInner = document.createElement("div");
+    var newCardMemberSkillButton = document.createElement("button");
+    var newCardMemberName = document.createTextNode(TestClan.identity.getMembers()[i].getName() + "\t");
+    var newCardMemberSkill = document.createTextNode(TestClan.identity.getMembers()[i].getSkillSet());
+    var newCardHealthValue = document.createTextNode(TestClan.identity.getMembers()[i].getHealth().toString());
+    newCard.setAttribute("class", "card");
+    newCardBody.setAttribute("class", "card-body");
+    newCardTitle.setAttribute("class", "card-title");
+    newCardProgressBarOutter.setAttribute("class", "progress");
+    newCardProgressBarInner.setAttribute("class", "progress-bar");
+    newCardMemberSkillButton.setAttribute("class", "btn btn-outline-warning");
+    newCardProgressBarInner.setAttribute("role", "progressbar");
+    newCardProgressBarInner.setAttribute("aria-valuenow", TestClan.identity.getMembers()[i].getHealth().toString());
+    newCardProgressBarInner.setAttribute("aria-valuemin", "0");
+    newCardProgressBarInner.setAttribute("aria-valuemax", "100");
+    newCardProgressBarInner.setAttribute("style", "width:" + TestClan.identity.getMembers()[i].getHealth().toString() + "%;");
+    newCardProgressBarInner.appendChild(newCardHealthValue);
+    newCard.appendChild(newCardBody);
+    newCardBody.appendChild(newCardTitle);
+    newCardTitle.appendChild(newCardMemberName);
+    newCardTitle.appendChild(newCardMemberSkillButton);
+    newCardMemberSkillButton.appendChild(newCardMemberSkill);
+    newCardProgressBarOutter.appendChild(newCardProgressBarInner);
+    newCardBody.appendChild(newCardProgressBarOutter);
+    InfoElement.appendChild(newCard);
+  }
+}
