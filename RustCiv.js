@@ -77,7 +77,6 @@ function Loot() {
   this.getAmmor = function() {return this.ammor;}
   this.getMeds = function() {return this.meds;}
 
-  //ToDo: implement these
   this.addRawResources = function(nameOfResource, quantity) {
     for(var i = 0; i < this.rawReasources.length; i++){
       if (this.rawReasources[i][0] == nameOfResource) {
@@ -108,7 +107,6 @@ function Loot() {
     this.meds.push([nameOfResource, quantity]);
   }
 
-  //ToDo: implement these
   this.removeRawResources = function(nameOfResource, quantity) {
     for(var i = 0; i < this.meds.length; i++){
       if (this.meds[i][0] == nameOfResource) {
@@ -168,7 +166,6 @@ function Base() {
   this.size;
   this.storage;
 
-  //ToDo: implement these
   this.getType = function() {
     return this.type;
   }
@@ -179,7 +176,6 @@ function Base() {
     return this.storage;
   }
 
-  //ToDo: implement these
   this.setType = function(type) {
     this.type = type;
   }
