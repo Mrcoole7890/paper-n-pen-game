@@ -12,6 +12,8 @@ var TestClanRelations = new Relations();
 
 var TestClanMemberOne = new Member();
 var TestClanMemberTwo = new Member();
+var TestClanMemberThree = new Member();
+var TestClanMemberFour = new Member();
 
 TestClanIdentity.setName("Cum Gobblins");
 
@@ -21,8 +23,16 @@ TestClanMemberOne.setSkillSet("Farming");
 TestClanMemberTwo.setName("Senpai Hamma");
 TestClanMemberTwo.setSkillSet("PvP");
 
+TestClanMemberThree.setName("Opifex");
+TestClanMemberThree.setSkillSet("Goofy");
+
+TestClanMemberFour.setName("Lezzapen");
+TestClanMemberFour.setSkillSet("Smart");
+
 TestClanIdentity.addMember(TestClanMemberOne);
 TestClanIdentity.addMember(TestClanMemberTwo);
+TestClanIdentity.addMember(TestClanMemberThree);
+TestClanIdentity.addMember(TestClanMemberFour);
 
 var TestClan = new RustCiv(TestClanIdentity,TestClanLoot,TestClanBase,TestClanRelations);
 
