@@ -230,3 +230,71 @@ function Relations() {
   //relations ships with other clans
   this.clans; //List Of Clans and their accociated feeling towards this clan
 }
+
+function Weapon() {
+  this.weaponName;
+  this.id;
+  this.damage = 0;
+  this.type = new WeaponType();
+  this.setType = function(type) {this.type.setType(type);};
+  this.getType = function() {return this.type.getType();};
+  this.getDamage = function() {return this.damage;};
+  this.setDamage = function(newDamage) {this.damage = newDamage;};
+  this.getWeaponName = function() {return this.weaponName;};
+  this.setWeaponName = function(newName) {this.weaponName = newName;};
+  this.getID = function() {return this.id;};
+  this.setID = function(newID) {this.id = newID;};
+}
+
+function WeaponType() {
+  this.type = null; // Please dont just directly access this future me...
+  this.validTypes = {"Ranged", "Melee"}; // should be modified as new types are added...
+  this.setType = function(type) {
+    var validTypeFound = false;
+    for (var i = 0; i < this.validTypes.length; i++) {
+        if (this.validTypes[i] == type) {
+          validTypeFound == true;
+          this.type = type;
+          break;
+        }
+    }
+    if (!validTypeFound) {
+      console.log("Type: " + type + " not within valid types");
+    }
+  }
+  this.getType = function() { return this.type; };
+}
+
+function Armmor() {
+  this.armmorClass = new ArmmorClass();
+  this.id;
+  this.defence = 0;
+  this.armmorName;
+  this.setID = function(newID) {this.id = newID;};
+  this.getID = function() {return this.id;};
+  this.setDefence = function(newDefence) { this.defence = newDefence;};
+  this.getDefence = function() {return this.defence;};
+  this.setArmmorName = function(newName) {this.armmorName = newName;};
+  this.getArmmorName = function() {return this.armmorName;};
+  this.setArmmorClass = function(newClass) {this.armmorClass.setClass(newClass);};
+  this.getArmmorClass = function() {return this.armmorClass;};
+}
+
+function ArmmorClass() {
+  this.class = null; // Please dont just directly access this future me...
+  this.validClases = {"Teir 1", "Teir 2", "Teir 3"}; // should be modified as new types are added...
+  this.setClass = function(newClass) {
+    var validClassFound = false;
+    for (var i = 0; i < this.validClasses.length; i++) {
+        if (this.validClasses[i] == newClass) {
+          validClassFound == true;
+          this.class = class;
+          break;
+        }
+    }
+    if (!validClassFound) {
+      console.log("Class: " + newClass + " not within valid types");
+    }
+  }
+  this.getClass = function() { return this.class; };
+}
