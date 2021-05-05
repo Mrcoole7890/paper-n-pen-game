@@ -1,3 +1,18 @@
+/*
+
+(5/5/2021 2:30AM)
+Due to the large amount of string literals being used, it may be of benefit to me
+to add constants to be iterated through... kinda wonder if this violates the KISS
+concept...
+
+Additionally, the amount of element construction in pure javascript is kinda a pain...
+I should have started with jQuery... Maybe later down the line I should change the code.
+
+Honestly, given this is test data, I am just gonna leave the sting literals as they are;
+however, I WILL NEED TO MOVE TO SQL DATA! Dont get comfortible with this... Or maybe I can
+incorperate a mass data handeler that accepts test data and SQL queries...
+
+*/
 var ClanElement = document.getElementById("Clan");
 var MembersElement = document.getElementById("Members");
 var LootElement = document.getElementById("Loot");
