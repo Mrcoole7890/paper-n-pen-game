@@ -50,7 +50,6 @@ ClanElement.onclick = function() {
 }
 
 MembersElement.onclick = function() {
-  console.log("the event fired");
   InfoElement.innerHTML = "";
   for (var i = 0; i < TestClan.identity.getMembers().length; i++){
     var newCard = document.createElement("div");
